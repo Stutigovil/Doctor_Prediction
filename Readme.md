@@ -24,5 +24,5 @@ pip install -r requirements.txt
 │── README.md  
 
 ## Final look
-![prediction](file:///C:/Users/Stuti/Desktop/Survey/Screenshot%202025-03-15%20235043.png)
+![prediction](Screenshot%202025-03-15%20235043.png)
 
