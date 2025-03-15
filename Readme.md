@@ -17,11 +17,12 @@ pip install -r requirements.txt
 
 │── model.py  # ML model for predictions  
 │── app.py  # Flask backend  
-│── templates/  
-│   └── index.html  # Frontend UI  
-│── static/  
-│   └── styles.css  # Styling  
+│── index.html  # Frontend UI  
+│── styles.css  # Styling   
 │── cleaned_dataset.csv  # Dataset  
 │── requirements.txt  # Dependencies  
 │── README.md  
+
+## Final look
+![prediction](file:///C:/Users/Stuti/Desktop/Survey/Screenshot%202025-03-15%20235043.png)
 
