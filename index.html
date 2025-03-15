@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Prediction System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Prediction System</h1>
+        
+        <form action="/predict" method="post">
+            <label for="login_time">Enter Login Hour (0-23):</label>
+            <input type="number" id="login_time" name="login_time" min="0" max="23" required>
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if message %}
+            <p class="message">{{ message }}</p>
+        {% endif %}
+
+        {% if doctors %}
+            <h2>Predicted Doctors</h2>
+            <table>
+                <tr>
+                    <th>NPI</th>
+                    <th>Speciality</th>
+                    <th>Region</th>
+                </tr>
+                {% for doctor in doctors %}
+                <tr>
+                    <td>{{ doctor['NPI'] }}</td>
+                    <td>{{ doctor['Speciality'] }}</td>
+                    <td>{{ doctor['Region'] }}</td>
+                </tr>
+                {% endfor %}
+            </table>
+            <br>
+            <a href="/download" class="download-btn">Download Excel Report</a>
+        {% endif %}
+    </div>
+</body>
+</html>
